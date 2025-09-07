@@ -41,7 +41,6 @@ func (n *Node) Insert(value int) *Node {
 		n.Right = n.Right.Insert(value)
 	}
 
-	n.Height = 1 + max(n.Left.GetHeight(), n.Right.GetHeight())
 	balance := n.Balance()
 
 	if balance > 1 {
